@@ -1,0 +1,14 @@
+@import "variables";
+@import "customs";
+@import "bootstrap-4.5.3-scss/bootstrap";
+@import "transition";
+@import "fonts";
+@import "buttons";
+@import "cards";
+@import "selectors";
+@import "inputs";
+@import "switch";
+
+.ant-layout {
+  background-color: #F4F5F6;
+}

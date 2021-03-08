@@ -1,0 +1,76 @@
+// 英文字體 Kulim Park 400, 600
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:wght@400;600&display=swap');
+// 中文字體 Noto Sans TC 400, 700
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+
+@import "variables";
+
+a {
+  color: $default-color;
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+// 文字形式命名模板 （{font-size}-{color}-{font-weight}）
+@each $sizeName , $size in $size-collections {
+  @each $colorName , $color in $color-collections {
+    @each $weight in $weight-collections {
+      .#{$sizeName}-#{$colorName}-#{$weight} {
+        font-size: $size;
+        color: $color;
+        font-weight: $weight;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+.title-1 {
+  @extend .huge-default-700;
+}
+
+.title-2 {
+  @extend .large-primary-blue-700;
+}
+
+.title-3 {
+  @extend .big-default-700;
+}
+
+.title-4 {
+  @extend .normal-secondary-700;
+}
+
+.description {
+  @extend .normal-default-400;
+}
+
+.sub-description {
+  @extend .small-secondary-400;
+}
+
+@each $sizeName , $size in $size-collections {
+  .font-size-#{$sizeName} {
+    font-size: $size;
+  }
+}
+
+@each $colorName , $color in $color-collections {
+  .font-color-#{$colorName} {
+    color: $color;
+  }
+}
+
+.anchor-text {
+  a {
+    @extend .big-third-700;
+    &:hover {
+      color: $primary-blue-color;
+    }
+  }
+
+  & .ant-anchor-link-title-active {
+    color: $default-color;
+  }
+}

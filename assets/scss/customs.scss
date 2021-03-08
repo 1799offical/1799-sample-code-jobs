@@ -1,0 +1,56 @@
+@import "variables";
+
+.be-pointer {
+  cursor: pointer;
+}
+
+.info-tag {
+  display: inline-block;
+  background: #E8F3FF;
+  border-radius: 8px;
+  padding: 4px 8px;
+  color: $default-color;
+  font-weight: 700;
+  font-size: $small-text-size;
+}
+
+.text-ellipsis {
+  position: relative;
+  span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: absolute;
+    width: 100%;
+  }
+  &:before {
+    content: '';
+    display: inline-block;
+  }
+}
+
+blockquote {
+  display: block;
+  padding: 20px 30px;
+  background: #F4F5F7;
+  border-radius: 5px;
+  margin: 0;
+  div {
+    border-left: 2px solid $primary-blue-color;
+    padding-left: 18px;
+  }
+}
+
+.div-responsive-image {
+  border-radius: 6px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 56.25%;
+  padding-top: 56.25%;
+}
+
+.no-border-radius {
+  border-radius: 0;
+}
